@@ -45,7 +45,8 @@ export function Navbar() {
 
   return (
     <nav
-      className="fixed top-4 md:top-6 left-1/2 z-50 w-[95%] max-w-5xl transition-all duration-500"
+      className="fixed top-4 md:top-6 left-1/2 z-50 w-[95%] max-w-5xl"
+      data-open={isOpen || undefined}
       style={{
         transform: "translateX(-50%)",
         borderRadius: isOpen ? "1.5rem" : "var(--radius-pill)",
@@ -195,6 +196,12 @@ export function Navbar() {
       )}
 
       <style>{`
+        nav[data-open] {
+          transition: background 500ms, box-shadow 500ms, border 500ms;
+        }
+        nav:not([data-open]) {
+          transition: background 700ms, box-shadow 700ms, border 700ms;
+        }
         @keyframes navbar-enter {
           from {
             opacity: 0;
