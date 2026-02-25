@@ -45,21 +45,25 @@ export function Navbar() {
 
   return (
     <nav
-      className="fixed top-4 md:top-6 left-1/2 z-50 w-[95%] max-w-5xl transition-all duration-700"
+      className="fixed top-4 md:top-6 left-1/2 z-50 w-[95%] max-w-5xl transition-all duration-500"
       style={{
         transform: "translateX(-50%)",
-        borderRadius: "var(--radius-pill)",
-        background: scrolled
-          ? "rgba(255, 255, 255, 0.85)"
-          : "rgba(46, 64, 54, 0.15)",
+        borderRadius: isOpen ? "1.5rem" : "var(--radius-pill)",
+        background: isOpen
+          ? (scrolled ? "rgba(255, 255, 255, 0.95)" : "rgba(26, 26, 26, 0.92)")
+          : scrolled
+            ? "rgba(255, 255, 255, 0.85)"
+            : "rgba(46, 64, 54, 0.15)",
         backdropFilter: "blur(20px) saturate(1.4)",
         WebkitBackdropFilter: "blur(20px) saturate(1.4)",
         border: scrolled
           ? "1px solid rgba(46, 64, 54, 0.1)"
           : "1px solid rgba(242, 240, 233, 0.15)",
-        boxShadow: scrolled
-          ? "0 4px 24px rgba(26, 26, 26, 0.1), 0 1px 2px rgba(26, 26, 26, 0.06)"
-          : "none",
+        boxShadow: isOpen
+          ? "0 8px 40px rgba(26, 26, 26, 0.25), 0 2px 8px rgba(26, 26, 26, 0.1)"
+          : scrolled
+            ? "0 4px 24px rgba(26, 26, 26, 0.1), 0 1px 2px rgba(26, 26, 26, 0.06)"
+            : "none",
         animation: "navbar-enter 1s ease-out 1.2s both",
       }}
     >
@@ -143,27 +147,41 @@ export function Navbar() {
       {isOpen && (
         <div
           ref={mobileMenuRef}
-          className="lg:hidden px-6 pb-6 pt-2 flex flex-col gap-1"
+          className="lg:hidden px-5 pb-5 pt-1 flex flex-col gap-0"
         >
+          <div
+            className="mb-3"
+            style={{
+              height: "1px",
+              background: scrolled
+                ? "rgba(46, 64, 54, 0.1)"
+                : "rgba(242, 240, 233, 0.1)",
+            }}
+          />
           {navLinks.map((link) => (
             <button
               key={link.name}
               onClick={() => scrollTo(link.to)}
-              className="text-left py-3 text-base font-medium border-b transition-colors duration-300 cursor-pointer"
+              className="text-left py-2.5 text-[15px] font-medium transition-colors duration-300 cursor-pointer"
               style={{
                 fontFamily: "var(--font-body)",
-                color: scrolled ? "var(--charcoal)" : "var(--cream)",
-                borderColor: scrolled
-                  ? "rgba(46, 64, 54, 0.08)"
-                  : "rgba(242, 240, 233, 0.1)",
+                color: scrolled ? "var(--charcoal)" : "rgba(242, 240, 233, 0.9)",
               }}
+              onMouseEnter={(e) =>
+                (e.currentTarget.style.color = "var(--clay)")
+              }
+              onMouseLeave={(e) =>
+                (e.currentTarget.style.color = scrolled
+                  ? "var(--charcoal)"
+                  : "rgba(242, 240, 233, 0.9)")
+              }
             >
               {link.name}
             </button>
           ))}
           <button
             onClick={() => scrollTo("registration")}
-            className="mt-3 btn-magnetic text-sm font-semibold tracking-wide px-5 py-3 text-center"
+            className="mt-3 text-sm font-semibold tracking-wide py-2.5 text-center"
             style={{
               fontFamily: "var(--font-heading)",
               borderRadius: "var(--radius-pill)",
@@ -171,7 +189,7 @@ export function Navbar() {
               color: "white",
             }}
           >
-            <span>Register Now</span>
+            Register Now
           </button>
         </div>
       )}
