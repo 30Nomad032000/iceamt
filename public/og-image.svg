@@ -45,11 +45,11 @@
   <rect x="80" y="395" width="200" height="2.5" rx="1.25" fill="#CC5833" opacity="0.6"/>
 
   <!-- Full name -->
-  <text x="80" y="440" font-family="system-ui, -apple-system, sans-serif" font-weight="400" font-size="18" fill="#F2F0E9" opacity="0.6">International Conference on Emerging Trends in</text>
-  <text x="80" y="468" font-family="system-ui, -apple-system, sans-serif" font-weight="500" font-size="18" fill="#F2F0E9" opacity="0.8">Applied Science, Management &amp; Technology</text>
+  <text x="80" y="440" font-family="system-ui, -apple-system, sans-serif" font-weight="400" font-size="18" fill="#F2F0E9" opacity="0.6">International Conference in</text>
+  <text x="80" y="468" font-family="system-ui, -apple-system, sans-serif" font-weight="500" font-size="18" fill="#F2F0E9" opacity="0.8">Engineering Applied Science, Management &amp; Technology</text>
 
   <!-- Date + Location -->
-  <text x="80" y="530" font-family="monospace" font-size="13" fill="#F2F0E9" opacity="0.35" letter-spacing="2">MARCH 31 &amp; AUG 1, 2027</text>
+  <text x="80" y="530" font-family="monospace" font-size="13" fill="#F2F0E9" opacity="0.35" letter-spacing="2">MARCH 3 &amp; 4, 2027</text>
   <text x="80" y="555" font-family="monospace" font-size="13" fill="#F2F0E9" opacity="0.35" letter-spacing="2">KALADY, KERALA, INDIA</text>
 
   <!-- Organized by -->

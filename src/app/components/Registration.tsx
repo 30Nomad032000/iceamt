@@ -268,7 +268,7 @@ export function Registration() {
                     : "rgba(26, 26, 26, 0.25)",
                 }}
               >
-                Deadline: March 5, 2027
+                Deadline: February 25, 2027
               </span>
             </div>
           ))}

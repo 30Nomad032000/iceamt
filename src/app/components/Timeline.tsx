@@ -6,28 +6,28 @@ gsap.registerPlugin(ScrollTrigger);
 
 const timelineItems = [
   {
-    date: "March 4, 2027",
+    date: "February 10, 2027",
     title: "Abstract Submission Deadline",
     description:
       "Submit your abstract for review. All topics in applied science, management, and technology are welcome.",
     animType: "geometric" as const,
   },
   {
-    date: "March 4, 2027",
+    date: "February 20, 2027",
     title: "Full Paper Submission",
     description:
       "Accepted abstracts must submit full papers by this date. Follow the conference paper format guidelines.",
     animType: "scanner" as const,
   },
   {
-    date: "March 5, 2027",
+    date: "February 25, 2027",
     title: "Last Date of Registration",
     description:
       "Complete your registration before this deadline to secure your spot at the conference.",
     animType: "waveform" as const,
   },
   {
-    date: "March 31 & Aug 1, 2027",
+    date: "March 3 & 4, 2027",
     title: "Conference Dates",
     description:
       "Two-day international conference at Adi Shankara Institute of Engineering and Technology, Kalady, Kerala.",

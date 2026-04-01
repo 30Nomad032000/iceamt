@@ -97,7 +97,7 @@ export function Footer() {
                 color: "rgba(242, 240, 233, 0.4)",
               }}
             >
-              International Conference on Emerging Trends in Applied Science,
+              International Conference in Engineering Applied Science,
               Management & Technology.
             </p>
 

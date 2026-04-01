@@ -150,10 +150,10 @@ export function Hero() {
               letterSpacing: "0.01em",
             }}
           >
-            International Conference on Emerging Trends in
+            International Conference in
             <br className="hidden sm:block" />
             <span style={{ color: "var(--cream)" }}>
-              {" "}Applied Science, Management & Technology
+              {" "}Engineering Applied Science, Management & Technology
             </span>
           </p>
         </div>
@@ -176,7 +176,7 @@ export function Hero() {
                 className="text-sm md:text-base font-semibold"
                 style={{ color: "var(--cream)" }}
               >
-                March 31 & August 1, 2027
+                March 3 & 4, 2027
               </span>
             </div>
             <div

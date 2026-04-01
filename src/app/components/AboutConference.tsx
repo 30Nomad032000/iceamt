@@ -115,7 +115,7 @@ export function AboutConference() {
               color: "rgba(242, 240, 233, 0.6)",
             }}
           >
-            The International Conference on Emerging Trends in Applied Science,
+            The International Conference in Engineering Applied Science,
             Management, and Technology (ICEAMT 2027) is a prestigious global event
             that serves as a dynamic platform for scholars, industry leaders,
             academics, and professionals to come together and share their insights,
